@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 const App:FC = () => {
   return (
     <div>
-      Start
+      Start test
     </div>
   );
 };
