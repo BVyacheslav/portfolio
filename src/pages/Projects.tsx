@@ -1,10 +1,13 @@
 import React, { FC } from 'react';
+import ProjectList from '../components/ProjectList';
+
 
 const Projects: FC = () => {
     return (
-        <div>
+        <>
             Страница с моими проектами
-        </div>
+            <ProjectList/>
+        </>
     );
 };
 
