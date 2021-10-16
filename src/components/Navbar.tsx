@@ -7,28 +7,39 @@ import './Navbar.css'
 
 const Navbar: FC = () => {
     const router = useHistory();
+
+    const [value, setValue] = React.useState(0);
+
+    const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+      setValue(newValue);
+    };
+    
     return (
         <>
-            <Tabs>
+            <Tabs 
+            value={value} 
+            onChange={handleChange} 
+            textColor='inherit'
+            centered>
                 <Tab 
                     label="HOME" 
                     onClick={() => router.push(RouteNames.HOME)}                
-                    style={{color: '#969ba1'}} 
+                     
                 />
                 <Tab 
                     label="PROJECTS" 
                     onClick={() => router.push(RouteNames.PROJECTS)}                
-                    style={{color: '#969ba1'}} 
+             
                 />
                 <Tab 
                     label="ABOUT" 
                     onClick={() => router.push(RouteNames.ABOUT)}                
-                    style={{color: '#969ba1'}} 
+                   
                 />
                 <Tab 
                     label="CONTACT" 
                     onClick={() => router.push(RouteNames.CONTACT)}                
-                    style={{color: '#969ba1'}} 
+                    
                 />
                 
             </Tabs>
