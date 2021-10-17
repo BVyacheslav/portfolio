@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
+import Grid from '@mui/material/Grid';
 
 import { useTypedSelector } from '../hooks/useTypedSelector';
 
@@ -15,9 +16,10 @@ const ProjectList: FC = () => {
   const router = useHistory();
 
     return (
-        <>
+      <Grid container spacing={5} justifyContent="center" sx={{ my: 1 }}>
         {projects.map((item) => (
-          <ImageListItem key={item.id} 
+          <Grid item key={item.id}>
+          <ImageListItem 
             onClick={() => {
               if (item.id === 1) {
                 router.push(RouteNames.PORTFOLIO)
@@ -27,11 +29,7 @@ const ProjectList: FC = () => {
                 router.push(RouteNames.LIFE)
               }  
               }}  
-            sx={{ 
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              width: 200 }}>
+            sx={{ width: 300 }}>
               <img
                 src={item.img}
                 alt={item.title}
@@ -42,8 +40,9 @@ const ProjectList: FC = () => {
               subtitle={item.description}
             />
           </ImageListItem>
+          </Grid>
         ))}
-      </>
+      </Grid>
     )
 }
 

@@ -4,10 +4,7 @@ import ProjectList from '../components/ProjectList';
 
 const Projects: FC = () => {
     return (
-        <>
-            Страница с моими проектами
             <ProjectList/>
-        </>
     );
 };
 
