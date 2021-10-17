@@ -3,6 +3,8 @@ import React, { FC, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { RouteNames } from '../router';
 
+import AccountBoxRoundedIcon from '@mui/icons-material/AccountBoxRounded';
+
 const Navbar: FC = () => {
     const router = useHistory();
 
@@ -27,7 +29,7 @@ const Navbar: FC = () => {
                 textColor='inherit'
                 centered>
                 <Tab
-                    label="HOME"
+                    icon={<AccountBoxRoundedIcon fontSize="large"/>}
                     onClick={() => router.push(RouteNames.HOME)}
                 />
                 <Tab
