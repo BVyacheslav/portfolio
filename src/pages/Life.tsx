@@ -1,9 +1,10 @@
 import React, { FC } from 'react';
+import LifeGame from '../components/lifeGame/LifeGame';
 
 const Life: FC = () => {
     return (
         <div>
-            Страница с игрой
+            <LifeGame />
         </div>
     );
 };
