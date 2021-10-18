@@ -27,7 +27,7 @@ const LifeGame = () => {
           backgroundAttachment: 'fixed',
           backgroundRepeat: 'no-repeat',
           minWidth: '100%',
-          minHeight: '100%'
+          minHeight: '100vh'
         },
         apple: {
             position: 'absolute' as 'absolute',
