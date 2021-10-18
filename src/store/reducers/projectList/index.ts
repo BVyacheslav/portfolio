@@ -24,6 +24,7 @@ const initialState: ProjectListState = {
     ]
 };
 
+
 export default function projectListReducer(state = initialState, action: any) {
     switch (action.type) {  
         default: 

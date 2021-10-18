@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
 import LifeGame from '../components/lifeGame/LifeGame';
 
-const Life: FC = () => {
+
+const Life = () => {
     return (
         <div>
             <LifeGame />

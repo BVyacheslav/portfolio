@@ -1,0 +1,10 @@
+.test {
+    text-align: center;
+    background-image: url("https://www.enjpg.com/img/2020/cool-cars.jpg");
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+

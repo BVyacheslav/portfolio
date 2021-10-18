@@ -1,0 +1,8 @@
+.Appp {
+    background-image: url("https://media.autoexpress.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1594991800/autoexpress/2020/07/Ferrari%20SF90-8.jpg");
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+}
