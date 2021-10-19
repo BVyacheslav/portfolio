@@ -18,7 +18,7 @@ const initialState: LifeGameState = {
         },
         {
             id: 2, 
-            img: '../images/apple.png', 
+            img: '../images/burger.png', 
             positionX: 700, 
             positionY: 70, 
             show: true

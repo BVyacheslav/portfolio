@@ -1,90 +1,140 @@
 import React, { useState } from 'react';
 
+import './LifeGame.css';
+
 import Grid from '@mui/material/Grid';
 import ImageListItem from '@mui/material/ImageListItem';
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 
 const LifeGame = () => {
 
-    const {projects} = useTypedSelector((state) => state.projectList);
-
     const {food, places} = useTypedSelector((state) => state.lifeGame);
 
     const [show, setShow] = useState(true);
     const [show2, setShow2] = useState(true);
-    // const [apple, setApple] = useState(0);
+    const [count, setCount] = useState(0);
     
-
     const styles = {
         background: {
-        position: 'relative' as 'relative',
-          backgroundImage: `url(${places[0].img})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          width: '100%',
-          backgroundAttachment: 'fixed',
-          backgroundRepeat: 'no-repeat',
-          minWidth: '100%',
-          minHeight: '100vh'
+            backgroundImage: `url(${places[0].img})`,
+            position: 'relative' as 'relative'
         },
         apple: {
             position: 'absolute' as 'absolute',
             top: 70,
-            left: 40
+            left: 150
         },
-        apple2: {
+        burger: {
             position: 'absolute' as 'absolute',
-            top: 70,
-            left: 700
+            top: 68,
+            left: 230
         }
-       };
+    }
+
+    // const styles = {
+    //     background: {
+    //     position: 'relative' as 'relative',
+    //       backgroundImage: `url(${places[0].img})`,
+    //       backgroundSize: 'cover',
+    //       backgroundPosition: 'center',
+    //       width: '100%',
+    //       backgroundAttachment: 'fixed',
+    //       backgroundRepeat: 'no-repeat',
+    //       minWidth: '100%',
+    //       minHeight: '100vh'
+    //     },
+    //     apple: {
+    //         position: 'absolute' as 'absolute',
+    //         top: 70,
+    //         left: 40
+    //     },
+    //     apple2: {
+    //         position: 'absolute' as 'absolute',
+    //         top: 70,
+    //         left: 700
+    //     }
+    //    };
 
     return (
-        <div>
-        <Grid container sx={{ m: 1 }} style={styles.background}>
-            <Grid item>
-            {/* <Typography variant="h6" gutterBottom component="div">
-                Apples: {apple}
-            </Typography> */}
-            </Grid>
-          {show &&
-            <Grid item onClick={() => {
-                setShow(prev => !prev)
-                // setApple(prev => prev++)
-            }
-            }>
+        <Box className="Game">
+            <Box className="Gameb" style={styles.background}>
+            <Typography>
+                Apple: {count}
+            </Typography>
+            {show &&
                 <ImageListItem   
-                    sx={{ width: 100 }}
+                onClick={() => {setShow(prev => !prev)
+                            setCount(prev => 1)
+                        }}
+                    sx={{ width: 40 }}
                     style={styles.apple}>
                     <img
-                        src={projects[0].img}
+                        src={food[0].img}
                         alt={'item.title'}
                     />
                 </ImageListItem>
-            </Grid>
-          }
-
-        {show2 &&
-            <Grid item onClick={() => {
-                setShow2(prev => !prev)
-                // setApple(prev => prev++)
             }
-            }>
+            {show2 &&
                 <ImageListItem   
-                    sx={{ width: 100 }}
-                    style={styles.apple2}>
+                onClick={() => {setShow2(prev => !prev)
+                        }}
+                    sx={{ width: 70 }}
+                    style={styles.burger}>
                     <img
-                        src={projects[0].img}
+                        src={food[1].img}
                         alt={'item.title'}
                     />
                 </ImageListItem>
-            </Grid>
-          }
-        </Grid>
-        </div>
+            }
+            </Box>
+        </Box>
     );
 };
 
 export default LifeGame;
+
+        // <div>
+        // <Grid container sx={{ m: 1 }} style={styles.background}>
+        //     <Grid item>
+        //     {/* <Typography variant="h6" gutterBottom component="div">
+        //         Apples: {apple}
+        //     </Typography> */}
+        //     </Grid>
+        //   {show &&
+        //     <Grid item onClick={() => {
+        //         setShow(prev => !prev)
+        //         // setApple(prev => prev++)
+        //     }
+        //     }>
+        //         <ImageListItem   
+        //             sx={{ width: 100 }}
+        //             style={styles.apple}>
+        //             <img
+        //                 src={projects[0].img}
+        //                 alt={'item.title'}
+        //             />
+        //         </ImageListItem>
+        //     </Grid>
+        //   }
+
+        // {show2 &&
+        //     <Grid item onClick={() => {
+        //         setShow2(prev => !prev)
+        //         // setApple(prev => prev++)
+        //     }
+        //     }>
+        //         <ImageListItem   
+        //             sx={{ width: 100 }}
+        //             style={styles.apple2}>
+        //             <img
+        //                 src={projects[0].img}
+        //                 alt={'item.title'}
+        //             />
+        //         </ImageListItem>
+        //     </Grid>
+        //   }
+        // </Grid>
+        // </div>
