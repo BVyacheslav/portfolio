@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-, "experimental/navbar"  ]
+, "experimental/navbar", "experimental/localStorageTest.js"  ]
 }

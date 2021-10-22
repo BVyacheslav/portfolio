@@ -1,6 +1,5 @@
 .Game {
     text-align: center;
-    background-color: #282c34;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,23 +9,9 @@
     margin: 15px;
     width: 533px;
     height: 333px;
-    /* width: calc(100vw - 200px); */
-    /* width: 90%;
-    height: calc(100vh - 110px);
-    min-height: 33px;
-    min-width: 53px; */
     border-radius: 10px;
     background-size: cover;
     background-position: center;
     color: rgb(255, 255, 255);
     
   }
-
-/* .Appp {
-    background-image: url("https://media.autoexpress.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1594991800/autoexpress/2020/07/Ferrari%20SF90-8.jpg");
-    position: fixed;
-    min-width: 100%;
-    min-height: 100%;
-    background-size: cover;
-    background-position: center;
-} */
