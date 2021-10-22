@@ -6,7 +6,9 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 import Box from '@mui/material/Box';
 
-const App:FC = () => {
+import './App.css';
+
+const App: FC = () => {
 
   const theme = createTheme({
     palette: {
@@ -15,23 +17,22 @@ const App:FC = () => {
   });
 
   return (
-    <ThemeProvider theme={theme}>
-    <Box
-      sx={{ 
-        bgcolor: 'background.default', 
-        color: 'text.primary',
-        p: 3
-      }}
-      style={{
-        minHeight: '100vh', 
-        margin: '-8px'
-      }}
-    >
-    <Navbar />
-    <AppRouter/>
-  </Box>
-  </ThemeProvider>
-
+    //<ThemeProvider theme={theme}>
+      <Box className="App-header"
+        // sx={{
+        //   bgcolor: 'background.default',
+        //   color: 'text.primary',
+        //   p: 3
+        // }}
+        // style={{
+        //   minHeight: '100vh',
+        //   margin: '-8px'
+        // }}
+      >
+        <Navbar />
+        <AppRouter />
+      </Box>
+  //  </ThemeProvider>
   );
 };
 
