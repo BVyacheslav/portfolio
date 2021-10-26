@@ -12,15 +12,17 @@ const initialState: LifeGameState = {
         {
             id: 1, 
             img: '../images/apple.png', 
-            positionX: 70, 
-            positionY: 70, 
+            width: '8vmin',
+            positionX: '45vmin', 
+            positionY: '16vmin', 
             show: true
         },
         {
             id: 2, 
             img: '../images/burger.png', 
-            positionX: 700, 
-            positionY: 70, 
+            width: '18vmin',
+            positionX: '66vmin', 
+            positionY: '13vmin', 
             show: true
         }
     ]

@@ -1,14 +1,18 @@
 .Game {
     text-align: center;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content:center;
   }
   
   .Gameb {
     margin: 15px;
-    width: 533px;
-    height: 333px;
+    /* width: 533px;
+    height: 333px; */
+    /* width: 60vw;
+    height: 40vw; */
+    width: 150vmin;
+    height: 80vmin;
     border-radius: 10px;
     background-size: cover;
     background-position: center;
