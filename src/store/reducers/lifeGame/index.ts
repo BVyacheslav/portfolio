@@ -1,4 +1,4 @@
-import { LifeGameState } from "./types";
+import { LifeGameAction, LifeGameActionEnum, LifeGameState } from "./types";
 
 
 const initialState: LifeGameState = {
@@ -15,7 +15,7 @@ const initialState: LifeGameState = {
             width: '8vmin',
             positionX: '45vmin', 
             positionY: '16vmin', 
-            show: true
+            hide: false
         },
         {
             id: 2, 
@@ -23,13 +23,19 @@ const initialState: LifeGameState = {
             width: '18vmin',
             positionX: '66vmin', 
             positionY: '13vmin', 
-            show: true
+            hide: false
         }
     ]
 }
 
-export default function lifeGameReducer(state = initialState, action: any) {
+export default function lifeGameReducer(state = initialState, action: LifeGameAction): LifeGameState {
     switch (action.type) {
+        case LifeGameActionEnum.SET_HIDE:  
+            return {
+                ...state, 
+                food: state.food.map(
+                    (item, i) => i === action.payload ? {...item, hide: true} : item
+                )}
         default:
             return state;
     }
