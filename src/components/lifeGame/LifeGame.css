@@ -3,9 +3,10 @@
     display: flex;
     align-items: center;
     justify-content:center;
+    font-size: calc(10px + 2vmin);
   }
   
-  .Gameb {
+  .Game-background {
     margin: 15px;
     /* width: 533px;
     height: 333px; */
@@ -16,6 +17,8 @@
     border-radius: 10px;
     background-size: cover;
     background-position: center;
-    color: rgb(255, 255, 255);
-    
-  }
+      }
+
+    .Text {
+      color: black;
+    }

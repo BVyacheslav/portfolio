@@ -5,6 +5,10 @@ const initialState: LifeGameState = {
     places: [
         {
             id: 1,
+            img: '../images/room.jpg'
+        },
+        {
+            id: 2,
             img: '../images/fridge.png'
         }
     ],

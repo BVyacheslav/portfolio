@@ -13,32 +13,52 @@ import { LifeGameActionCreators } from '../../store/reducers/lifeGame/actionCrea
 const LifeGame: FC = () => {
 
     const {food, places} = useTypedSelector((state) => state.lifeGame);
+   
+    
 
     const dispatch = useDispatch();
 
     // const [show, setShow] = useState(true);
     // const [show2, setShow2] = useState(true);
     const [count, setCount] = useState(0);
+    const [location, setLocation] = useState(0);
+    const bg = places[location].img;
     
     const styles = {
         background: {
-            backgroundImage: `url(${places[0].img})`,
+            backgroundImage: `url(${bg})`,
             position: 'relative' as 'relative'
         }
     }
 
     return (
         <Box className="Game">
-            <Box className="Gameb" style={styles.background}>
-            <Typography>
-                Apple: {count}
-            </Typography>
+            <Box 
+                className="Game-background" 
+                style={styles.background} 
+                onClick={() => {
+                    if(location < places.length - 1) {
+                        setLocation(location + 1)
+                    }
+                }}
+            >
+                { location === 1 &&
+                    <Typography variant="inherit">
+                        Food: {count}
+                    </Typography>
+                }
+                { count === 2 &&
+                    <Typography variant="inherit" className="Text">
+                        Все съели!
+                    </Typography>
+                }
                { food.map((item, i) => {
                    return (
-                       !item.hide &&
-                <ImageListItem   
+                       (!item.hide && location === 1) && 
+                <ImageListItem 
+                    key={item.id}
                     onClick={() => {   
-                        setCount(1)                             
+                        setCount(count + 1)                             
                         dispatch(LifeGameActionCreators.setShow(i))
                             }}
                         style={{
