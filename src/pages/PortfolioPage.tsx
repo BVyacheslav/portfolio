@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-const Portfolio: FC = () => {
+const PortfolioPage: FC = () => {
     return (
         <div>
             Страница о сайте
@@ -8,4 +8,4 @@ const Portfolio: FC = () => {
     );
 };
 
-export default Portfolio;
+export default PortfolioPage;

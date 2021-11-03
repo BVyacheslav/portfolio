@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-const Home: FC = () => {
+const HomePage: FC = () => {
     return (
         <div>
             Здравствуйте! Меня зовут Вячеслав.
@@ -8,4 +8,4 @@ const Home: FC = () => {
     );
 };
 
-export default Home;
+export default HomePage;

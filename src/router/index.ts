@@ -1,10 +1,10 @@
-import About from "../pages/About";
-import Contact from "../pages/Contact";
-import Home from "../pages/Home";
-import Projects from "../pages/Projects";
-import Portfolio from "../pages/Portfolio";
-import Films from "../pages/Films";
-import Life from "../pages/Life";
+import AboutPage from "../pages/AboutPage";
+import ContactPage from "../pages/ContactPage";
+import HomePage from "../pages/HomePage";
+import ProjectsPage from "../pages/ProjectsPage";
+import PortfolioPage from "../pages/PortfolioPage";
+import FilmsPage from "../pages/FilmsPage";
+import LifeGamePage from "../pages/LifeGamePage";
 
 export interface IRoute {
     path: string;
@@ -23,11 +23,11 @@ export enum RouteNames {
 }
 
 export const routes: IRoute[] = [
-    {path: RouteNames.HOME, exact: true, component: Home},
-    {path: RouteNames.PROJECTS, exact: true, component: Projects},
-    {path: RouteNames.ABOUT, exact: true, component: About},
-    {path: RouteNames.CONTACT, exact: true, component: Contact},
-    {path: RouteNames.PORTFOLIO, exact: true, component: Portfolio},
-    {path: RouteNames.FILMS, exact: true, component: Films},
-    {path: RouteNames.LIFE, exact: true, component: Life}
+    {path: RouteNames.HOME, exact: true, component: HomePage},
+    {path: RouteNames.PROJECTS, exact: true, component: ProjectsPage},
+    {path: RouteNames.ABOUT, exact: true, component: AboutPage},
+    {path: RouteNames.CONTACT, exact: true, component: ContactPage},
+    {path: RouteNames.PORTFOLIO, exact: true, component: PortfolioPage},
+    {path: RouteNames.FILMS, exact: true, component: FilmsPage},
+    {path: RouteNames.LIFE, exact: true, component: LifeGamePage}
 ]

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-const About: FC = () => {
+const AboutPage: FC = () => {
     return (
         <div>
             Страница обо мне
@@ -8,4 +8,4 @@ const About: FC = () => {
     );
 };
 
-export default About;
+export default AboutPage;

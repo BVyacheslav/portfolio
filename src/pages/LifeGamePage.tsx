@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import LifeGame from '../components/lifeGame/LifeGame';
 
 
-const Life: FC = () => {
+const LifeGamePage: FC = () => {
     return (
         <div>
             <LifeGame />
@@ -10,4 +10,4 @@ const Life: FC = () => {
     );
 };
 
-export default Life;
+export default LifeGamePage;

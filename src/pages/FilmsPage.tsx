@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-const Films: FC = () => {
+const FilmsPage: FC = () => {
     return (
         <div>
             Страница с фильмами
@@ -8,4 +8,4 @@ const Films: FC = () => {
     );
 };
 
-export default Films;
+export default FilmsPage;

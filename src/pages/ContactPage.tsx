@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 
-import './Contact.css';
+import './ContactPage.css';
 
-const Contact: FC = () => {
+const ContactPage: FC = () => {
 
     return (
         <div className="test">
@@ -11,4 +11,4 @@ const Contact: FC = () => {
     );
 };
 
-export default Contact;
+export default ContactPage;

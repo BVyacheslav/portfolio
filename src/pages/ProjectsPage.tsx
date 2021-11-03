@@ -2,10 +2,10 @@ import React, { FC } from 'react';
 import ProjectList from '../components/ProjectList';
 
 
-const Projects: FC = () => {
+const ProjectsPage: FC = () => {
     return (
             <ProjectList/>
     );
 };
 
-export default Projects;
+export default ProjectsPage;
